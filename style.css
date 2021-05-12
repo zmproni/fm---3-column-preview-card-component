@@ -39,7 +39,7 @@ body {
 .card {
   display: block;
   color: var(--transparent-white);
-  padding: 4em;
+  padding: 3em;
 }
 
 
@@ -55,6 +55,7 @@ body {
 @media (orientation:landscape) {
   .content {
     display: flex;
+    max-width: 62em;
   }
   
   .card:first-child {
@@ -84,6 +85,7 @@ body {
 
 .card__header {
   display: block;
+  color: white;
   font-size: 3em;
   font-family: "Big Shoulders Display", cursive;
   text-align: left;
@@ -104,7 +106,7 @@ body {
   box-sizing: content-box;
   padding: 0.85em 2.25em;
   border-radius: 4em;
-  background-color: var(--transparent-white);
+  background-color: white;
   border: 0.15em solid  transparent;
   user-select: none;
 }
@@ -127,8 +129,8 @@ body {
 
 .card__action-button:active {
   background-color: transparent;
-  border-color: var(--transparent-white);
-  color: var(--transparent-white);
+  border-color: white;
+  color: white;
 }
 
 .attribution {
