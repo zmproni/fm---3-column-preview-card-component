@@ -1,0 +1,145 @@
+/* Step 1: Set color variables  */
+/* Step 2: Import fonts  */
+/* Step 3: Padding and margin reset */
+/* Step 4: Attributions*/
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons): */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Step 5: Center content */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+
+.content {
+  padding: 4.5em 1.5em;
+}
+
+.card {
+  display: block;
+  color: var(--transparent-white);
+  padding: 4em;
+}
+
+
+/* Change on desktop */
+.card:first-child {
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.card:last-child {
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+@media (orientation:landscape) {
+  .content {
+    display: flex;
+  }
+  
+  .card:first-child {
+    border-radius: 0.5em 0 0 0.5em ;
+  }
+  
+  .card:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+  }
+  
+  .card__action-button {
+    margin-top: 3.5em;
+  }
+}
+
+.card--sedans {
+  background-color: var(--bright-orange);
+}
+
+.card--suvs {
+  background-color: var(--dark-cyan);
+}
+
+.card--luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.card__header {
+  display: block;
+  font-size: 3em;
+  font-family: "Big Shoulders Display", cursive;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 0.5em;
+}
+
+.card__content {
+  display: block;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 1.7em;
+  margin-bottom: 2em;
+}
+
+.card__action-button {
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 0.85em 2.25em;
+  border-radius: 4em;
+  background-color: var(--transparent-white);
+  border: 0.15em solid  transparent;
+  user-select: none;
+}
+
+.card__action-button:hover {
+  cursor: pointer;
+}
+
+.card--sedans .card__action-button {
+  color: var(--bright-orange);
+}
+
+.card--suvs .card__action-button {
+  color: var(--dark-cyan);
+}
+
+.card--luxury .card__action-button {
+  color: var(--very-dark-cyan);
+}
+
+.card__action-button:active {
+  background-color: transparent;
+  border-color: var(--transparent-white);
+  color: var(--transparent-white);
+}
+
+.attribution {
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
