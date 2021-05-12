@@ -30,6 +30,7 @@ body {
   background-color: var(--transparent-white);
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
+  background-color: var(--transparent-white);
 }
 
 .content {
